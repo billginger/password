@@ -1,2 +1,3 @@
-# password
-a password management system created by Node.js &amp; React
+# Lazy Pass
+
+a password management system created by Node.js & React
