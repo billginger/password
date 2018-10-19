@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/billginger/password.git"
+    "url": "https://github.com/billginger/password.git"
   },
   "keywords": [
     "password",
