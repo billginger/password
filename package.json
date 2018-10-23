@@ -21,9 +21,9 @@
   },
   "homepage": "https://github.com/billginger/password#readme",
   "dependencies": {
-    "koa": "^2.5.3",
+    "koa": "^2.6.1",
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
-    "log4js": "^3.0.5"
+    "log4js": "^3.0.6"
   }
 }
