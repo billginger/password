@@ -8,6 +8,11 @@
   },
   "author": "Bill",
   "license": "MIT",
+  "dependencies": {
+    "antd": "^3.10.2",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0"
+  },
   "devDependencies": {
     "webpack": "^4.22.0",
     "webpack-cli": "^3.1.2"
