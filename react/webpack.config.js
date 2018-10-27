@@ -1,10 +1,12 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-	entry: './src/index.jsx',
+	entry: {
+		'js/bundle': './src/index.jsx'
+	},
 	output: {
-		filename: 'bundle.js',
-		path: __dirname + '/../static/js',
+		filename: '[name].js',
+		path: __dirname + '/../static',
 		publicPath: '/'
 	},
 	module: {
@@ -30,7 +32,7 @@ module.exports = {
 	plugins: [
 		new HtmlWebPackPlugin({
 			template: './src/index.html',
-			filename: '../../views/index.html',
+			filename: '../views/index.html',
 			hash: true
 		})
 	]
