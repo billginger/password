@@ -1,3 +1,4 @@
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -17,9 +18,16 @@ module.exports = {
 				use: {
 					loader: 'babel-loader',
 					options: {
-						presets: ['env', 'react']
+						presets: ['env', 'react'],
+						plugins: [['import', { libraryName: 'antd', style: true }]]
 					}
 				}
+			},
+			{
+				test: /\.less$/,
+				use: ExtractTextPlugin.extract({
+					use: [ 'css-loader', 'less-loader?javascriptEnabled=1' ]
+				})
 			},
 			{
 				test: /\.html$/,
@@ -30,6 +38,7 @@ module.exports = {
 		]
 	},
 	plugins: [
+		new ExtractTextPlugin('css/style.css'),
 		new HtmlWebPackPlugin({
 			template: './src/index.html',
 			filename: '../views/index.html',
