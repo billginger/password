@@ -43,11 +43,6 @@ module.exports = {
 			template: './src/index.html',
 			filename: '../views/index.html',
 			hash: true
-		}),
-		new HtmlWebPackPlugin({
-			template: './src/index.html',
-			filename: '../views/login.html',
-			hash: true
 		})
 	]
 }
