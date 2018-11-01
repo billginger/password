@@ -44,5 +44,6 @@ module.exports = {
 			filename: '../views/index.html',
 			hash: true
 		})
-	]
+	],
+	mode: 'development'
 }
