@@ -1,4 +1,4 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -25,9 +25,7 @@ module.exports = {
 			},
 			{
 				test: /\.less$/,
-				use: ExtractTextPlugin.extract({
-					use: [ 'css-loader', 'less-loader?javascriptEnabled=1' ]
-				})
+				use: [ MiniCssExtractPlugin.loader, 'css-loader', 'less-loader?javascriptEnabled=1' ]
 			},
 			{
 				test: /\.html$/,
@@ -38,7 +36,9 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new ExtractTextPlugin('css/style.css'),
+		new MiniCssExtractPlugin({
+			filename: 'css/style.css'
+		}),
 		new HtmlWebPackPlugin({
 			template: './src/index.html',
 			filename: '../views/index.html',

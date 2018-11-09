@@ -1232,6 +1232,7 @@ mark {
 .ant-motion-collapse-active {
   transition: height 0.15s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.15s cubic-bezier(0.645, 0.045, 0.355, 1) !important;
 }
+
 /* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
 /* stylelint-disable no-duplicate-selectors */
 /* stylelint-disable */
@@ -2251,7 +2252,7 @@ mark {
 .ant-btn-two-chinese-chars:first-letter {
   letter-spacing: 0.34em;
 }
-.ant-btn-two-chinese-chars > * {
+.ant-btn-two-chinese-chars > *:not(.anticon) {
   letter-spacing: 0.34em;
   margin-right: -0.34em;
 }
@@ -2287,6 +2288,7 @@ a.ant-btn-lg {
 a.ant-btn-sm {
   line-height: 22px;
 }
+
 /* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
 /* stylelint-disable no-duplicate-selectors */
 /* stylelint-disable */
@@ -2353,6 +2355,7 @@ a.ant-btn-sm {
   border-radius: 2px;
   background-color: #fff;
   transition: all 0.3s;
+  border-collapse: separate;
 }
 .ant-checkbox-inner:after {
   transform: rotate(45deg) scale(0);
@@ -2482,6 +2485,7 @@ a.ant-btn-sm {
   border-color: rgba(0, 0, 0, 0.25);
   background-color: rgba(0, 0, 0, 0.25);
 }
+
 /* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
 /* stylelint-disable no-duplicate-selectors */
 /* stylelint-disable */
@@ -2917,10 +2921,12 @@ textarea.ant-input {
 .ant-input-search.ant-input-search-enter-button > .ant-input-suffix {
   right: 0;
 }
+
 /* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
 /* stylelint-disable no-duplicate-selectors */
 /* stylelint-disable */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
+
 /* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
 /* stylelint-disable no-duplicate-selectors */
 /* stylelint-disable */
@@ -3079,7 +3085,7 @@ input[type="checkbox"].disabled {
 .ant-form-explain,
 .ant-form-extra {
   color: rgba(0, 0, 0, 0.45);
-  line-height: 1.5;
+  line-height: 1.524;
   transition: color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
   margin-top: -2px;
   clear: both;
@@ -3601,6 +3607,7 @@ form .ant-input-group-wrapper {
     transform: scale(1);
   }
 }
+
 /* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
 /* stylelint-disable no-duplicate-selectors */
 /* stylelint-disable */
@@ -6985,3 +6992,15 @@ form .ant-input-group-wrapper {
     order: 0;
   }
 }
+
+body {
+  height: auto;
+  font: 14px 'Open Sans', 'Microsoft YaHei';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f9f9f9;
+}
+b {
+  font-weight: 600;
+}
+
