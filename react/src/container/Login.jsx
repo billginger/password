@@ -13,7 +13,7 @@ class Login extends React.Component {
 							rules: [{ required: true, message: 'Please input your username!' }]
 						})(
 							<Input
-								prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
+								prefix={<Icon type="user" className="tc-login-icon" />}
 								placeholder="Username"
 							/>
 						)}
@@ -23,7 +23,7 @@ class Login extends React.Component {
 							rules: [{ required: true, message: 'Please input your password!' }]
 						})(
 							<Input
-								prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
+								prefix={<Icon type="lock" className="tc-login-icon" />}
 								placeholder="Password"
 								type="password"
 							/>
@@ -36,9 +36,7 @@ class Login extends React.Component {
 							<Checkbox>Remember me</Checkbox>
 						)}
 						<a id="tc-login-forgot">Forgot password</a>
-						<Button type="primary" htmlType="submit" block>
-							Log in
-						</Button>
+						<Button type="primary" htmlType="submit" block>Log in</Button>
 					</FormItem>
 				</Form>
 			</Card>
