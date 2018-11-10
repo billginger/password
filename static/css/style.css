@@ -2020,6 +2020,7 @@ mark {
 }
 .ant-btn > .anticon {
   line-height: 1;
+  vertical-align: -0.19em;
 }
 .ant-btn,
 .ant-btn:active,
@@ -2680,7 +2681,6 @@ mark {
 .ant-btn-group > .ant-btn,
 .ant-btn-group > span > .ant-btn {
   position: relative;
-  line-height: 30px;
 }
 .ant-btn-group > .ant-btn:hover,
 .ant-btn-group > span > .ant-btn:hover,
@@ -3038,13 +3038,13 @@ mark {
 .ant-btn:empty {
   vertical-align: top;
 }
-a.ant-btn {
+a.ant-btn > span {
   line-height: 30px;
 }
-a.ant-btn-lg {
+a.ant-btn-lg > span {
   line-height: 38px;
 }
-a.ant-btn-sm {
+a.ant-btn-sm > span {
   line-height: 22px;
 }
 

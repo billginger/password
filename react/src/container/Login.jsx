@@ -6,7 +6,7 @@ class Login extends React.Component {
 	render() {
 		const { getFieldDecorator } = this.props.form;
 		return (
-			<Card title="Sign in to LazyPass" id="tc-login">
+			<Card title="Log in to LazyPass" id="tc-login">
 				<Form>
 					<FormItem>
 						{getFieldDecorator('un', {
