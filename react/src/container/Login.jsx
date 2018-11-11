@@ -5,9 +5,13 @@ const FormItem = Form.Item;
 class Login extends React.Component {
 	render() {
 		const { getFieldDecorator } = this.props.form;
+		const handleSubmit = e => {
+			e.preventDefault();
+			console.log(e);
+		}
 		return (
 			<Card title="Log in to LazyPass" id="tc-login">
-				<Form>
+				<Form onSubmit={handleSubmit}>
 					<FormItem>
 						{getFieldDecorator('un', {
 							rules: [{ required: true, message: 'Please input your username!' }]
