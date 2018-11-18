@@ -30,7 +30,7 @@ class Login extends React.Component {
 				}).then(res => (
 					res.ok ? res.json() : Promise.reject(res)
 				)).then(data => {
-					console.log(data);
+					this.props.history.push('/');
 				}).catch(err => {
 					this.setState({
 						alertMessage: err.statusText,

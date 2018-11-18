@@ -9,8 +9,14 @@ router.get(['/', '/login'], ctx => {
 });
 
 router.post('/login', ctx => {
-	ctx.status = 401;
-	ctx.message = 'Custom error message';
+	console.log(ctx.request.body);
+	if (ctx.request.body.un == 'admin' && ctx.request.body.pw == 'admin') {
+		ctx.type = 'json';
+		ctx.body = {};
+	} else {
+		ctx.status = 401;
+		ctx.message = 'Custom error message';
+	}
 });
 
 module.exports = router;

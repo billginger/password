@@ -3,6 +3,7 @@ global.dir = __dirname;
 const path = require('path');
 const Koa = require('koa');
 const static = require('koa-static');
+const bodyParser = require('koa-bodyparser');
 const log4js = require('log4js');
 
 const config = require('./config.js');
@@ -26,6 +27,7 @@ const router = require('./routes');
 const app = new Koa();
 app.use(resLog);
 app.use(static(path.join(global.dir, 'static')));
+app.use(bodyParser());
 app.use(router.routes()).use(router.allowedMethods());
 app.listen(port);
 
