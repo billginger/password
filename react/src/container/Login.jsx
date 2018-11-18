@@ -41,10 +41,10 @@ class Login extends React.Component {
 			});
 		}
 		const loginAlert = (
-			alertType && <Alert message={alertMessage} type={alertType} />
+			alertType && <Alert message={alertMessage} type={alertType} className="tc-login-alert" />
 		);
 		return (
-			<Card title="Log in to LazyPass" id="tc-login">
+			<Card id="tc-login" title="Login to LazyPass">
 				<Form onSubmit={handleSubmit}>
 					<FormItem>
 						{getFieldDecorator('un', {
@@ -76,7 +76,7 @@ class Login extends React.Component {
 						<a id="tc-login-forgot">Forgot password</a>
 						{loginAlert}
 						<Button type="primary" htmlType="submit" block loading={buttonLoading}>
-							Log in
+							Login
 						</Button>
 					</FormItem>
 				</Form>
