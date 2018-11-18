@@ -1,14 +1,48 @@
 import React from 'react';
-import { Card, Form, Input, Icon, Checkbox, Button } from 'antd';
+import { Card, Form, Input, Icon, Checkbox, Button, Alert } from 'antd';
 const FormItem = Form.Item;
 
 class Login extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			alertMessage: '',
+			alertType: '',
+			buttonLoading: false
+		}
+	}
 	render() {
-		const { getFieldDecorator } = this.props.form;
+		const { getFieldDecorator, validateFieldsAndScroll } = this.props.form;
+		const { alertMessage, alertType, buttonLoading } = this.state;
 		const handleSubmit = e => {
 			e.preventDefault();
-			console.log(e);
+			validateFieldsAndScroll((err, values) => {
+				if (err) return;
+				this.setState({
+					alertMessage: 'msgSubmitting',
+					alertType: 'info',
+					buttonLoading: true
+				});
+				fetch('/login', {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify(values)
+				}).then(res => (
+					res.ok ? res.json() : Promise.reject(res)
+				)).then(data => {
+					console.log(data);
+				}).catch(err => {
+					this.setState({
+						alertMessage: err.statusText,
+						alertType: 'error',
+						buttonLoading: false
+					});
+				});
+			});
 		}
+		const loginAlert = (
+			alertType && <Alert message={alertMessage} type={alertType} />
+		);
 		return (
 			<Card title="Log in to LazyPass" id="tc-login">
 				<Form onSubmit={handleSubmit}>
@@ -40,7 +74,10 @@ class Login extends React.Component {
 							<Checkbox>Remember me</Checkbox>
 						)}
 						<a id="tc-login-forgot">Forgot password</a>
-						<Button type="primary" htmlType="submit" block>Log in</Button>
+						{loginAlert}
+						<Button type="primary" htmlType="submit" block loading={buttonLoading}>
+							Log in
+						</Button>
 					</FormItem>
 				</Form>
 			</Card>
