@@ -18,7 +18,7 @@ module.exports = {
 				use: {
 					loader: 'babel-loader',
 					options: {
-						presets: ['env', 'react'],
+						presets: ['@babel/preset-env', '@babel/preset-react'],
 						plugins: [['import', { libraryName: 'antd', style: true }]]
 					}
 				}
@@ -26,12 +26,6 @@ module.exports = {
 			{
 				test: /\.less$/,
 				use: [ MiniCssExtractPlugin.loader, 'css-loader', 'less-loader?javascriptEnabled=1' ]
-			},
-			{
-				test: /\.html$/,
-				use: {
-					loader: 'html-loader'
-				}
 			}
 		]
 	},
