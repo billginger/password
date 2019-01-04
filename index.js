@@ -17,7 +17,7 @@ const resLog = async (ctx, next) => {
 	await next();
 	const ms = Date.now() - start;
 	const bytes = ctx.response.header['content-length'] || 0;
-	log.info(`${ctx.method} ${ctx.url} ${ctx.response.status} ${bytes}bytes ${ms}ms`);
+	log.info(`${ctx.method} ${ctx.url} ${ctx.status} ${bytes}bytes ${ms}ms`);
 }
 
 const normalizePort = val => (parseInt(val));

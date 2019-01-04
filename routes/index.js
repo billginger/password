@@ -9,12 +9,10 @@ router.get(['/', '/login'], ctx => {
 });
 
 router.post('/login', ctx => {
-	console.log(ctx.request.body);
 	if (ctx.request.body.un == 'admin' && ctx.request.body.pw == 'admin') {
-		ctx.type = 'json';
-		ctx.body = {};
+		ctx.status = 200;
 	} else {
-		ctx.status = 401;
+		ctx.status = 400;
 		ctx.message = 'Custom error message';
 	}
 });

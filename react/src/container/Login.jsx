@@ -28,10 +28,8 @@ class Login extends React.Component {
 					headers: { 'Content-Type': 'application/json' },
 					body: JSON.stringify(values)
 				}).then(res => (
-					res.ok ? res.json() : Promise.reject(res)
-				)).then(data => {
-					this.props.history.push('/');
-				}).catch(err => {
+					res.ok ? this.props.history.push('/') : Promise.reject(res)
+				)).catch(err => {
 					this.setState({
 						alertMessage: err.statusText,
 						alertType: 'error',
