@@ -9,8 +9,4 @@ const getCookie = key => {
 	}
 }
 
-const getLanguage = () => (
-	navigator.language == 'zh-CN' ? 'zh-CN' : 'en-US'
-);
-
-export { getCookie, getLanguage };
+export { getCookie };

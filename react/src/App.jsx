@@ -1,10 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { IntlProvider } from 'react-intl';
+import { intl } from './AppIntl.jsx';
 import AppRouter from './AppRouter.jsx';
 
 const App = () => (
-	<IntlProvider>
+	<IntlProvider locale={intl.locale} messages={intl.messages}>
 		<AppRouter />
 	</IntlProvider>
 );
