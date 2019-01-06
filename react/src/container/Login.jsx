@@ -1,4 +1,5 @@
 import React from 'react';
+import { injectIntl } from 'react-intl';
 import { Card, Form, Input, Icon, Checkbox, Button, Alert } from 'antd';
 const FormItem = Form.Item;
 
@@ -12,6 +13,7 @@ class Login extends React.Component {
 		}
 	}
 	render() {
+		const i18n = this.props.intl.messages;
 		const { getFieldDecorator, validateFieldsAndScroll } = this.props.form;
 		const { alertMessage, alertType, buttonLoading } = this.state;
 		const handleSubmit = e => {
@@ -42,7 +44,7 @@ class Login extends React.Component {
 			alertType && <Alert message={alertMessage} type={alertType} className="tc-login-alert" />
 		);
 		return (
-			<Card id="tc-login" title="Login to LazyPass">
+			<Card id="tc-login" title={i18n.loginTitle}>
 				<Form onSubmit={handleSubmit}>
 					<FormItem>
 						{getFieldDecorator('un', {
@@ -83,4 +85,4 @@ class Login extends React.Component {
 	}
 }
 
-export default Form.create()(Login);
+export default injectIntl(Form.create()(Login));
