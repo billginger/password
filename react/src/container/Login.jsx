@@ -7,22 +7,20 @@ class Login extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			alertMessage: '',
-			alertType: '',
+			errMsg: '',
 			buttonLoading: false
 		}
 	}
 	render() {
 		const i18n = this.props.intl.messages;
 		const { getFieldDecorator, validateFieldsAndScroll } = this.props.form;
-		const { alertMessage, alertType, buttonLoading } = this.state;
+		const { errMsg, buttonLoading } = this.state;
+		const alertMessage = errMsg && (i18n[errMsg] || i18n.msgError);
 		const handleSubmit = e => {
 			e.preventDefault();
 			validateFieldsAndScroll((err, values) => {
 				if (err) return;
 				this.setState({
-					alertMessage: 'msgSubmitting',
-					alertType: 'info',
 					buttonLoading: true
 				});
 				fetch('/login', {
@@ -33,37 +31,43 @@ class Login extends React.Component {
 					res.ok ? this.props.history.push('/') : Promise.reject(res)
 				)).catch(err => {
 					this.setState({
-						alertMessage: err.statusText,
-						alertType: 'error',
+						errMsg: err.statusText,
 						buttonLoading: false
 					});
 				});
 			});
 		}
+		const handleInputChange = () => {
+			this.setState({
+				errMsg: ''
+			});
+		}
 		const loginAlert = (
-			alertType && <Alert message={alertMessage} type={alertType} className="tc-login-alert" />
+			alertMessage && <Alert message={alertMessage} type='error' className="tc-login-alert" />
 		);
 		return (
 			<Card id="tc-login" title={i18n.loginTitle}>
 				<Form onSubmit={handleSubmit}>
 					<FormItem>
 						{getFieldDecorator('un', {
-							rules: [{ required: true, message: 'Please input your username!' }]
+							rules: [{ required: true, message: i18n.msgNeedInput }]
 						})(
 							<Input
 								prefix={<Icon type="user" className="tc-login-icon" />}
-								placeholder="Username"
+								placeholder={i18n.loginUsername}
+								onChange={handleInputChange}
 							/>
 						)}
 					</FormItem>
 					<FormItem>
 						{getFieldDecorator('pw', {
-							rules: [{ required: true, message: 'Please input your password!' }]
+							rules: [{ required: true, message: i18n.msgNeedInput }]
 						})(
 							<Input
 								prefix={<Icon type="lock" className="tc-login-icon" />}
-								placeholder="Password"
+								placeholder={i18n.loginPassword}
 								type="password"
+								onChange={handleInputChange}
 							/>
 						)}
 					</FormItem>
@@ -71,12 +75,12 @@ class Login extends React.Component {
 						{getFieldDecorator('rm', {
 							valuePropName: 'checked'
 						})(
-							<Checkbox>Remember me</Checkbox>
+							<Checkbox onChange={handleInputChange}>{i18n.loginRememberMe}</Checkbox>
 						)}
-						<a id="tc-login-forgot">Forgot password</a>
+						<a id="tc-login-forgot">{i18n.loginForgotPassword}</a>
 						{loginAlert}
 						<Button type="primary" htmlType="submit" block loading={buttonLoading}>
-							Login
+							{i18n.loginButton}
 						</Button>
 					</FormItem>
 				</Form>

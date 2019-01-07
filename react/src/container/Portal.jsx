@@ -1,9 +1,11 @@
 import React from 'react';
+import { injectIntl } from 'react-intl';
 import { Layout, Menu, Breadcrumb } from 'antd';
 const { Header, Content, Footer } = Layout;
 
 class Portal extends React.Component {
 	render() {
+		const i18n = this.props.intl.messages;
 		return (
 			<Layout>
 				<Header>
@@ -16,16 +18,16 @@ class Portal extends React.Component {
 				</Header>
 				<Content id="tc-layout-content">
 					<Breadcrumb className="tc-layout-breadcrumb">
-						<Breadcrumb.Item>Dashboard</Breadcrumb.Item>
+						<Breadcrumb.Item>{i18n.dashboard}</Breadcrumb.Item>
 					</Breadcrumb>
 					<div style={{ background: '#fff', padding: 24, minHeight: 280 }}>Content</div>
 				</Content>
 				<Footer id="tc-layout-footer">
-					LazyPass © 2018 Created by Bill
+					LazyPass © 2019 Created by Bill
 				</Footer>
 			</Layout>
 		);
 	}
 }
 
-export default Portal;
+export default injectIntl(Portal);

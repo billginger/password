@@ -1,5 +1,14 @@
 const en_US = {
-	loginTitle: 'Login to LazyPass'
+	msgError: 'System error! Please contact the administrator!',
+	msgNeedInput: 'Please input this field!',
+	msgLoginFailed: 'Login failed! Incorrect username or password!',
+	loginTitle: 'Login to LazyPass',
+	loginUsername: 'Username',
+	loginPassword: 'Password',
+	loginRememberMe: 'Remember me',
+	loginForgotPassword: 'Forgot password?',
+	loginButton: 'Login',
+	dashboard: 'Dashboard'
 }
 
 export default en_US;

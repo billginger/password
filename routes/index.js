@@ -13,7 +13,8 @@ router.post('/login', ctx => {
 		ctx.status = 200;
 	} else {
 		ctx.status = 400;
-		ctx.message = 'Custom error message';
+		ctx.message = 'msgLoginFailed';
+		ctx.body = 'details';
 	}
 });
 
