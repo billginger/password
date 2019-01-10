@@ -1,13 +1,13 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { IntlProvider } from 'react-intl';
-import { intl } from './i18n';
-import AppRouter from './AppRouter.jsx';
+import { Provider } from 'react-redux';
+import { store } from './store';
+import AppIntl from './AppIntl.jsx';
 
 const App = () => (
-	<IntlProvider locale={intl.locale} messages={intl.messages}>
-		<AppRouter />
-	</IntlProvider>
+	<Provider store={store}>
+		<AppIntl />
+	</Provider>
 );
 
 render(<App />, document.getElementById('root'));

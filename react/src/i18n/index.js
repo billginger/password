@@ -7,23 +7,21 @@ import { getCookie } from '../utils/browser';
 
 // Configure multiple languages
 addLocaleData([...en, ...zh]);
-const i18n = {
+const intl = {
 	'en-US': { name: 'English', locale: 'en', messages: en_US },
 	'zh-CN': { name: '简体中文', locale: 'zh', messages: zh_CN }
 }
 
 // Multi-language options
 let languages = [];
-for (let key in i18n) {
-	languages.push({ value: key, label: i18n[key].name });
+for (let key in intl) {
+	languages.push({ value: key, label: intl[key].name });
 }
 
 // Current language
 let language = getCookie('language');
-if (!language || !i18n[language]) {
+if (!language || !intl[language]) {
 	language = navigator.language == 'zh-CN' ? 'zh-CN' : 'en-US';
 }
 
-const intl = i18n[language];
-
-export { intl, languages };
+export { intl, languages, language };
