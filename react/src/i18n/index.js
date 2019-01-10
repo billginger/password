@@ -1,9 +1,9 @@
 import { addLocaleData } from 'react-intl';
 import en from 'react-intl/locale-data/en';
 import zh from 'react-intl/locale-data/zh';
-import en_US from './i18n/en-US';
-import zh_CN from './i18n/zh-CN';
-import { getCookie } from './utils/browser';
+import en_US from './en-US';
+import zh_CN from './zh-CN';
+import { getCookie } from '../utils/browser';
 
 // Configure multiple languages
 addLocaleData([...en, ...zh]);
