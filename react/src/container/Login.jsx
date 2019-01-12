@@ -1,7 +1,7 @@
 import React from 'react';
 import { injectIntl } from 'react-intl';
 import { Card, Form, Input, Icon, Checkbox, Button, Alert } from 'antd';
-const FormItem = Form.Item;
+import Language from '../common/Language.jsx';
 
 class Login extends React.Component {
 	constructor(props) {
@@ -43,48 +43,51 @@ class Login extends React.Component {
 			});
 		}
 		const loginAlert = (
-			alertMessage && <Alert message={alertMessage} type='error' className="tc-login-alert" />
+			alertMessage && <Alert id="tc-login-alert" message={alertMessage} type="error" />
 		);
 		return (
-			<Card id="tc-login" title={i18n.loginTitle}>
-				<Form onSubmit={handleSubmit}>
-					<FormItem>
-						{getFieldDecorator('un', {
-							rules: [{ required: true, message: i18n.msgNeedInput }]
-						})(
-							<Input
-								prefix={<Icon type="user" className="tc-login-icon" />}
-								placeholder={i18n.loginUsername}
-								onChange={handleInputChange}
-							/>
-						)}
-					</FormItem>
-					<FormItem>
-						{getFieldDecorator('pw', {
-							rules: [{ required: true, message: i18n.msgNeedInput }]
-						})(
-							<Input
-								prefix={<Icon type="lock" className="tc-login-icon" />}
-								placeholder={i18n.loginPassword}
-								type="password"
-								onChange={handleInputChange}
-							/>
-						)}
-					</FormItem>
-					<FormItem>
-						{getFieldDecorator('rm', {
-							valuePropName: 'checked'
-						})(
-							<Checkbox onChange={handleInputChange}>{i18n.loginRememberMe}</Checkbox>
-						)}
-						<a id="tc-login-forgot">{i18n.loginForgotPassword}</a>
-						{loginAlert}
-						<Button type="primary" htmlType="submit" block loading={buttonLoading}>
-							{i18n.loginButton}
-						</Button>
-					</FormItem>
-				</Form>
-			</Card>
+			<div id="tc-login">
+				<Language id="tc-login-language" />
+				<Card id="tc-login-card" title={i18n.loginTitle}>
+					<Form onSubmit={handleSubmit}>
+						<Form.Item>
+							{getFieldDecorator('un', {
+								rules: [{ required: true, message: i18n.msgNeedInput }]
+							})(
+								<Input
+									prefix={<Icon type="user" className="tc-login-icon" />}
+									placeholder={i18n.loginUsername}
+									onChange={handleInputChange}
+								/>
+							)}
+						</Form.Item>
+						<Form.Item>
+							{getFieldDecorator('pw', {
+								rules: [{ required: true, message: i18n.msgNeedInput }]
+							})(
+								<Input
+									prefix={<Icon type="lock" className="tc-login-icon" />}
+									placeholder={i18n.loginPassword}
+									type="password"
+									onChange={handleInputChange}
+								/>
+							)}
+						</Form.Item>
+						<Form.Item>
+							{getFieldDecorator('rm', {
+								valuePropName: 'checked'
+							})(
+								<Checkbox onChange={handleInputChange}>{i18n.loginRememberMe}</Checkbox>
+							)}
+							<a id="tc-login-forgot">{i18n.loginForgotPassword}</a>
+							{loginAlert}
+							<Button type="primary" htmlType="submit" block loading={buttonLoading}>
+								{i18n.loginButton}
+							</Button>
+						</Form.Item>
+					</Form>
+				</Card>
+			</div>
 		);
 	}
 }

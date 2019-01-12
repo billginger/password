@@ -1,7 +1,7 @@
 import React from 'react';
 import { injectIntl } from 'react-intl';
 import { Layout, Menu, Breadcrumb } from 'antd';
-import PortalLanguage from './PortalLanguage.jsx';
+import Language from '../common/Language.jsx';
 const { Header, Content, Footer } = Layout;
 
 const Portal = ({ intl }) => {
@@ -9,21 +9,21 @@ const Portal = ({ intl }) => {
 	return (
 		<Layout>
 			<Header>
-				<h1 id="tc-layout-title">Lazy<b>Pass</b></h1>
-				<PortalLanguage />
-				<Menu id="tc-layout-menu" theme="dark" mode="horizontal">
+				<h1 id="tc-portal-title">Lazy<b>Pass</b></h1>
+				<Language id="tc-portal-language" ghost="true" />
+				<Menu id="tc-portal-menu" theme="dark" mode="horizontal">
 					<Menu.Item key="1">nav 1</Menu.Item>
 					<Menu.Item key="2">nav 2</Menu.Item>
 					<Menu.Item key="3">nav 3</Menu.Item>
 				</Menu>
 			</Header>
-			<Content id="tc-layout-content">
-				<Breadcrumb className="tc-layout-breadcrumb">
+			<Content id="tc-portal-content">
+				<Breadcrumb className="tc-portal-breadcrumb">
 					<Breadcrumb.Item>{i18n.dashboard}</Breadcrumb.Item>
 				</Breadcrumb>
 				<div style={{ background: '#fff', padding: 24, minHeight: 280 }}>Content</div>
 			</Content>
-			<Footer id="tc-layout-footer">
+			<Footer id="tc-portal-footer">
 				LazyPass © 2019 Created by Bill
 			</Footer>
 		</Layout>
