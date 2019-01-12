@@ -1,4 +1,5 @@
 import { combineReducers, createStore } from 'redux';
+import { lang } from '../i18n';
 
 // Action
 const setLanguage = payload => (
@@ -6,7 +7,7 @@ const setLanguage = payload => (
 );
 
 // Reducer
-const language = (state = '', action) => (
+const language = (state = lang, action) => (
 	action.type == 'SetLanguage' ? action.payload : state
 );
 const reducer = combineReducers({

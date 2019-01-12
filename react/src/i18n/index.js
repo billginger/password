@@ -19,9 +19,9 @@ for (let key in intl) {
 }
 
 // Current language
-let language = getCookie('language');
-if (!language || !intl[language]) {
-	language = navigator.language == 'zh-CN' ? 'zh-CN' : 'en-US';
+let lang = getCookie('userLanguage');
+if (!lang || !intl[lang]) {
+	lang = navigator.language == 'zh-CN' ? 'zh-CN' : 'en-US';
 }
 
-export { intl, languages, language };
+export { intl, languages, lang };
