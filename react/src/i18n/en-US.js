@@ -8,7 +8,10 @@ const en_US = {
 	loginRememberMe: 'Remember me',
 	loginForgotPassword: 'Forgot password?',
 	loginButton: 'Login',
-	dashboard: 'Dashboard'
+	dashboard: 'Dashboard',
+	passwordManagement: 'Password',
+	systemManagement: 'System',
+	userLogout: 'Logout'
 }
 
 export default en_US;

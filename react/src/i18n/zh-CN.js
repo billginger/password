@@ -8,7 +8,10 @@ const zh_CN = {
 	loginRememberMe: '记住我',
 	loginForgotPassword: '忘记密码了？',
 	loginButton: '登录',
-	dashboard: '概览'
+	dashboard: '概览',
+	passwordManagement: '密码管理',
+	systemManagement: '系统管理',
+	userLogout: '退出'
 }
 
 export default zh_CN;
