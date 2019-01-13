@@ -1,26 +1,18 @@
 import React from 'react';
 import { injectIntl } from 'react-intl';
-import { Layout, Menu, Breadcrumb, Dropdown, Icon } from 'antd';
-import Language from '../common/Language.jsx';
+import { Layout, Menu, Breadcrumb } from 'antd';
+import PortalMenuUser from './PortalMenuUser.jsx';
+import MenuLanguage from '../common/MenuLanguage.jsx';
 const { Header, Content, Footer } = Layout;
 
 const Portal = ({ intl }) => {
 	const i18n = intl.messages;
-	const menu = (
-		<Menu>
-			<Menu.Item>
-				<a href="/logout">{i18n.userLogout}</a>
-			</Menu.Item>
-		</Menu>
-	);
 	return (
 		<Layout>
 			<Header>
 				<h1 id="tc-portal-title">Lazy<b>Pass</b></h1>
-				<Dropdown overlay={menu}>
-					<Icon id="tc-portal-user" type="user" />
-				</Dropdown>
-				<Language id="tc-portal-language" />
+				<PortalMenuUser />
+				<MenuLanguage id="tc-portal-language" />
 				<Menu id="tc-portal-menu" theme="dark" mode="horizontal">
 					<Menu.Item key="1">{i18n.dashboard}</Menu.Item>
 					<Menu.Item key="2">{i18n.passwordManagement}</Menu.Item>

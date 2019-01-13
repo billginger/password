@@ -1,7 +1,7 @@
 import React from 'react';
 import { injectIntl } from 'react-intl';
 import { Card, Form, Input, Icon, Checkbox, Button, Alert } from 'antd';
-import Language from '../common/Language.jsx';
+import MenuLanguage from '../common/MenuLanguage.jsx';
 
 class Login extends React.Component {
 	constructor(props) {
@@ -47,7 +47,7 @@ class Login extends React.Component {
 		);
 		return (
 			<div id="tc-login">
-				<Language id="tc-login-language" />
+				<MenuLanguage id="tc-login-language" />
 				<Card id="tc-login-card" title={i18n.loginTitle}>
 					<Form onSubmit={handleSubmit}>
 						<Form.Item>

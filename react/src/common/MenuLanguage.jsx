@@ -9,7 +9,7 @@ for (let key in i18n) {
 	menuItem.push(<Menu.Item key={key}>{i18n[key].name}</Menu.Item>);
 }
 
-const PortalLanguage = ({ id, lang, setLang }) => {
+const MenuLanguage = ({ id, lang, setLang }) => {
 	const menu = (
 		<Menu selectedKeys={[lang]} onClick={e => {setLang(e.key)}}>
 			{menuItem}
@@ -30,4 +30,4 @@ const mapDispatchToProps = dispatch => ({
 	setLang: payload => dispatch(setLanguage(payload))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(PortalLanguage);
+export default connect(mapStateToProps, mapDispatchToProps)(MenuLanguage);

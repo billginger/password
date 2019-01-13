@@ -2,6 +2,8 @@ const zh_CN = {
 	msgError: '系统出错了！请与管理员联系！',
 	msgNeedInput: '请填写此字段！',
 	msgLoginFailed: '登录失败！用户名或密码不正确！',
+	modalConfirmTitle: '请确认',
+	modalConfirmBody: '确定要{action}{target}？',
 	loginTitle: '登录 LazyPass',
 	loginUsername: '用户名',
 	loginPassword: '密码',
