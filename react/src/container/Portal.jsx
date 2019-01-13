@@ -10,7 +10,7 @@ const Portal = ({ intl }) => {
 		<Layout>
 			<Header>
 				<h1 id="tc-portal-title">Lazy<b>Pass</b></h1>
-				<Language id="tc-portal-language" ghost="true" />
+				<Language id="tc-portal-language" />
 				<Menu id="tc-portal-menu" theme="dark" mode="horizontal">
 					<Menu.Item key="1">nav 1</Menu.Item>
 					<Menu.Item key="2">nav 2</Menu.Item>

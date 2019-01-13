@@ -9,7 +9,7 @@ for (let key in i18n) {
 	menuItem.push(<Menu.Item key={key}>{i18n[key].name}</Menu.Item>);
 }
 
-const PortalLanguage = ({ id, ghost, lang, setLang }) => {
+const PortalLanguage = ({ id, lang, setLang }) => {
 	const menu = (
 		<Menu selectedKeys={[lang]} onClick={e => {setLang(e.key)}}>
 			{menuItem}
@@ -17,9 +17,7 @@ const PortalLanguage = ({ id, ghost, lang, setLang }) => {
 	);
 	return (
 		<Dropdown overlay={menu}>
-			<Button id={id} size="small" ghost={ghost}>
-				{i18n[lang].name} <Icon type="down" />
-			</Button>
+			<Icon id={id} type="global" />
 		</Dropdown>
 	);
 }
