@@ -9156,6 +9156,9 @@ textarea.ant-input {
   font-weight: 100;
   color: #fff;
 }
+#tc-portal-title > b {
+  font-weight: 500;
+}
 #tc-portal-menu {
   float: right;
   line-height: 64px;

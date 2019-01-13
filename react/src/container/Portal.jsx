@@ -9,7 +9,7 @@ const Portal = ({ intl }) => {
 	const menu = (
 		<Menu>
 			<Menu.Item>
-				{i18n.userLogout}
+				<a href="/logout">{i18n.userLogout}</a>
 			</Menu.Item>
 		</Menu>
 	);
