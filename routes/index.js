@@ -1,6 +1,6 @@
 const Router = require('koa-router');
-const render = require('../controllers/render');
-const { userLogin, userLogout } = require('../controllers/user');
+const render = require('../controllers/render.js');
+const { userLogin, userLogout } = require('../controllers/user.js');
 
 const router = new Router();
 router.get(['/', '/login'], render);
