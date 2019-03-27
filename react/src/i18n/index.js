@@ -3,7 +3,7 @@ import en from 'react-intl/locale-data/en.js';
 import zh from 'react-intl/locale-data/zh.js';
 import en_US from './en-US.js';
 import zh_CN from './zh-CN.js';
-import { getCookie } from '../utils/browser.js';
+import { getStorage } from '../utils/browser.js';
 
 // Configure multiple languages
 addLocaleData([...en, ...zh]);
@@ -13,7 +13,7 @@ const i18n = {
 };
 
 // Current language
-let lang = getCookie('userLanguage');
+let lang = getStorage('userLanguage');
 if (!lang || !i18n[lang]) {
 	lang = navigator.language == 'zh-CN' ? 'zh-CN' : 'en-US';
 }

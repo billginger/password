@@ -15,7 +15,7 @@ const PortalMenuUser = ({ intl }) => {
 				location.href = '/logout';
 			}
 		});
-	}
+	};
 	const menu = (
 		<Menu>
 			<Menu.Item onClick={showLogoutConfirm}>
@@ -28,6 +28,6 @@ const PortalMenuUser = ({ intl }) => {
 			<Icon id="tc-portal-user" type="user" />
 		</Dropdown>
 	);
-}
+};
 
 export default injectIntl(PortalMenuUser);

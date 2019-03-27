@@ -9,4 +9,19 @@ const getCookie = key => {
 	}
 };
 
-export { getCookie };
+const setCookie = (key, value) => {
+	let date = new Date();
+	date.setFullYear(date.getFullYear() + 3);
+	const expires = date.toUTCString();
+	document.cookie = `${key}=${value}; expires=${expires}`;
+};
+
+const getStorage = key => (
+	window.localStorage ? localStorage.getItem(key) : getCookie(key)
+);
+
+const setStorage = (key, value) => (
+	window.localStorage ? localStorage.setItem(key, value) : setCookie(key, value)
+);
+
+export { getStorage, setStorage };

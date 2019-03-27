@@ -30,6 +30,6 @@ const Portal = ({ intl }) => {
 			</Footer>
 		</Layout>
 	);
-}
+};
 
 export default injectIntl(Portal);

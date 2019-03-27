@@ -36,12 +36,12 @@ class Login extends React.Component {
 					});
 				});
 			});
-		}
+		};
 		const handleInputChange = () => {
 			this.setState({
 				errMsg: ''
 			});
-		}
+		};
 		const loginAlert = (
 			alertMessage && <Alert id="tc-login-alert" message={alertMessage} type="error" />
 		);

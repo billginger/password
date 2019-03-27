@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Menu, Dropdown, Icon } from 'antd';
 import { setLanguage } from '../store';
 import { i18n } from '../i18n';
+import { setStorage } from '../utils/browser.js';
 
 let menuItem = [];
 for (let key in i18n) {
@@ -10,8 +11,12 @@ for (let key in i18n) {
 }
 
 const MenuLanguage = ({ id, lang, setLang }) => {
+	const changeLanguage = e => {
+		setStorage('userLanguage', e.key);
+		setLang(e.key);
+	};
 	const menu = (
-		<Menu selectedKeys={[lang]} onClick={e => {setLang(e.key)}}>
+		<Menu selectedKeys={[lang]} onClick={changeLanguage}>
 			{menuItem}
 		</Menu>
 	);
@@ -20,7 +25,7 @@ const MenuLanguage = ({ id, lang, setLang }) => {
 			<Icon id={id} type="global" />
 		</Dropdown>
 	);
-}
+};
 
 const mapStateToProps = state => ({
 	lang: state.language
