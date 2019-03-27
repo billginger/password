@@ -7,6 +7,6 @@ const getCookie = key => {
 			return arr[1];
 		}
 	}
-}
+};
 
 export { getCookie };

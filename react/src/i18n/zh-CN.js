@@ -14,6 +14,6 @@ const zh_CN = {
 	passwordManagement: '密码管理',
 	systemManagement: '系统管理',
 	userLogout: '退出登录'
-}
+};
 
 export default zh_CN;

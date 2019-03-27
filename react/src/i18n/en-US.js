@@ -14,6 +14,6 @@ const en_US = {
 	passwordManagement: 'Password',
 	systemManagement: 'System',
 	userLogout: 'Logout'
-}
+};
 
 export default en_US;

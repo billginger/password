@@ -1,16 +1,16 @@
 import { addLocaleData } from 'react-intl';
-import en from 'react-intl/locale-data/en';
-import zh from 'react-intl/locale-data/zh';
-import en_US from './en-US';
-import zh_CN from './zh-CN';
-import { getCookie } from '../utils/browser';
+import en from 'react-intl/locale-data/en.js';
+import zh from 'react-intl/locale-data/zh.js';
+import en_US from './en-US.js';
+import zh_CN from './zh-CN.js';
+import { getCookie } from '../utils/browser.js';
 
 // Configure multiple languages
 addLocaleData([...en, ...zh]);
 const i18n = {
 	'en-US': { name: 'English', locale: 'en', messages: en_US },
 	'zh-CN': { name: '简体中文', locale: 'zh', messages: zh_CN }
-}
+};
 
 // Current language
 let lang = getCookie('userLanguage');
