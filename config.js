@@ -1,10 +1,8 @@
-const config = {
+module.exports = {
 	local: {
 		port: 3000
 	},
 	prod: {
 		port: 80
 	}
-}
-
-module.exports = config;
+};

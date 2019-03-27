@@ -16,7 +16,7 @@ const resLog = async (ctx, next) => {
 	const ms = Date.now() - start;
 	const bytes = ctx.response.header['content-length'] || 0;
 	log.info(`${ctx.method} ${ctx.url} ${ctx.status} ${bytes}bytes ${ms}ms`);
-}
+};
 
 const env = process.env.NODE_ENV || 'local';
 const cfg = config[env];

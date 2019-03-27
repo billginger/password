@@ -1,0 +1,26 @@
+{
+	"env": {
+		"commonjs": true,
+		"es6": true,
+		"node": true
+	},
+	"extends": "eslint:recommended",
+	"globals": {
+		"Atomics": "readonly",
+		"SharedArrayBuffer": "readonly"
+	},
+	"parserOptions": {
+		"ecmaVersion": 2018
+	},
+	"rules": {
+		"camelcase": ["error", { "properties": "always" }],
+		"new-cap": "error",
+		"quotes": ["error", "single", { "allowTemplateLiterals": true }],
+		"indent": ["error", "tab"],
+		"semi": ["error", "always"],
+		"linebreak-style": ["error", "unix"],
+		"max-len": ["warn", 120],
+		"no-multiple-empty-lines": ["warn", { "max": 1, "maxBOF": 0, "maxEOF": 0 }],
+		"eol-last": ["warn", "always"]
+	}
+}
