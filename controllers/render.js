@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = ctx => {
 	if (ctx.url != '/login') {
-		if (!ctx.cookies.get('uid')) {
+		if (!ctx.cookies.get('uid') || !ctx.cookies.get('token')) {
 			return ctx.redirect('/login');
 		}
 	}

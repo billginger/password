@@ -1,6 +1,6 @@
 const User = require('../models/user.js');
 const { getPassword, getToken } = require('../libs/crypto.js');
-const { handleError, handleWarn } = require('../libs/handle.js');
+const { handleWarn, handleError } = require('../libs/handle.js');
 
 exports.userLogin = async (ctx) => {
 	const name = ctx.request.body.un && ctx.request.body.un.trim();
@@ -17,6 +17,7 @@ exports.userLogin = async (ctx) => {
 		}
 		ctx.status = 200;
 		ctx.cookies.set('uid', user._id);
+		ctx.cookies.set('token', token);
 	} catch (err) {
 		handleError(ctx, err);
 	}
@@ -24,5 +25,6 @@ exports.userLogin = async (ctx) => {
 
 exports.userLogout = ctx => {
 	ctx.cookies.set('uid', '', { maxAge: 0 });
+	ctx.cookies.set('token', '', { maxAge: 0 });
 	ctx.redirect('/login');
 };
