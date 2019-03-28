@@ -2,6 +2,7 @@ const en_US = {
 	msgError: 'System error! Please contact the administrator!',
 	msgNeedInput: 'Please input this field!',
 	msgLoginFailed: 'Login failed! Incorrect username or password!',
+	msgUserLocked: "Your account is locked! Please contact the administrator!",
 	modalConfirmTitle: 'Please Check',
 	modalConfirmBody: 'To Confirm {action} {target}?',
 	loginTitle: 'Login to LazyPass',

@@ -5711,7 +5711,7 @@ eval("\n\n/**\n * Copyright 2015, Yahoo! Inc.\n * Copyrights licensed under the 
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6059,7 +6059,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var antd
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nvar en_US = {\n  msgError: 'System error! Please contact the administrator!',\n  msgNeedInput: 'Please input this field!',\n  msgLoginFailed: 'Login failed! Incorrect username or password!',\n  modalConfirmTitle: 'Please Check',\n  modalConfirmBody: 'To Confirm {action} {target}?',\n  loginTitle: 'Login to LazyPass',\n  loginUsername: 'Username',\n  loginPassword: 'Password',\n  loginRememberMe: 'Remember me',\n  loginForgotPassword: 'Forgot password?',\n  loginButton: 'Login',\n  dashboard: 'Dashboard',\n  passwordManagement: 'Password',\n  systemManagement: 'System',\n  userLogout: 'Logout'\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (en_US);\n\n//# sourceURL=webpack:///./src/i18n/en-US.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nvar en_US = {\n  msgError: 'System error! Please contact the administrator!',\n  msgNeedInput: 'Please input this field!',\n  msgLoginFailed: 'Login failed! Incorrect username or password!',\n  msgUserLocked: \"Your account is locked! Please contact the administrator!\",\n  modalConfirmTitle: 'Please Check',\n  modalConfirmBody: 'To Confirm {action} {target}?',\n  loginTitle: 'Login to LazyPass',\n  loginUsername: 'Username',\n  loginPassword: 'Password',\n  loginRememberMe: 'Remember me',\n  loginForgotPassword: 'Forgot password?',\n  loginButton: 'Login',\n  dashboard: 'Dashboard',\n  passwordManagement: 'Password',\n  systemManagement: 'System',\n  userLogout: 'Logout'\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (en_US);\n\n//# sourceURL=webpack:///./src/i18n/en-US.js?");
 
 /***/ }),
 
@@ -6083,7 +6083,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nvar zh_CN = {\n  msgError: '系统出错了！请与管理员联系！',\n  msgNeedInput: '请填写此字段！',\n  msgLoginFailed: '登录失败！用户名或密码不正确！',\n  modalConfirmTitle: '请确认',\n  modalConfirmBody: '确定要{action}{target}？',\n  loginTitle: '登录 LazyPass',\n  loginUsername: '用户名',\n  loginPassword: '密码',\n  loginRememberMe: '记住我',\n  loginForgotPassword: '忘记密码了？',\n  loginButton: '登录',\n  dashboard: '概览',\n  passwordManagement: '密码管理',\n  systemManagement: '系统管理',\n  userLogout: '退出登录'\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (zh_CN);\n\n//# sourceURL=webpack:///./src/i18n/zh-CN.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nvar zh_CN = {\n  msgError: '系统出错了！请与管理员联系！',\n  msgNeedInput: '请填写此字段！',\n  msgLoginFailed: '登录失败！用户名或密码不正确！',\n  msgUserLocked: '您的帐号已被锁定！请与管理员联系！',\n  modalConfirmTitle: '请确认',\n  modalConfirmBody: '确定要{action}{target}？',\n  loginTitle: '登录 LazyPass',\n  loginUsername: '用户名',\n  loginPassword: '密码',\n  loginRememberMe: '记住我',\n  loginForgotPassword: '忘记密码了？',\n  loginButton: '登录',\n  dashboard: '概览',\n  passwordManagement: '密码管理',\n  systemManagement: '系统管理',\n  userLogout: '退出登录'\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (zh_CN);\n\n//# sourceURL=webpack:///./src/i18n/zh-CN.js?");
 
 /***/ }),
 
