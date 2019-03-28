@@ -43,7 +43,7 @@ class Login extends React.Component {
 			});
 		};
 		const loginAlert = (
-			alertMessage && <Alert id="tc-login-alert" message={alertMessage} type="error" />
+			alertMessage && <Alert className="tc-login-alert" message={alertMessage} type="error" />
 		);
 		return (
 			<div id="tc-login">

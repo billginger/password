@@ -9535,7 +9535,7 @@ textarea.ant-input {
 .tc-login-icon {
   color: rgba(0, 0, 0, 0.25);
 }
-#tc-login-alert {
+.tc-login-alert {
   margin: 0 0 10px;
 }
 #tc-login-forgot {
