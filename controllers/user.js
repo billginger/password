@@ -3,14 +3,15 @@ const { getPassword, getToken } = require('../libs/crypto.js');
 const { handleSuccess, handleFail, handleError } = require('../libs/handle.js');
 
 exports.userLogin = async (ctx) => {
-	const name = ctx.request.body.un && ctx.request.body.un.trim();
+	const un = ctx.request.body.un && ctx.request.body.un.trim();
 	const pw = ctx.request.body.pw && ctx.request.body.pw.trim();
+	const name = new RegExp(`^${un}$`, 'i');
 	const password = getPassword(pw);
 	const token = getToken();
 	try {
 		const user = await User.findOneAndUpdate({ name, password, isDel: false }, { token });
-		if (!user) return handleFail(ctx, `[login] [no found] [name:${name}]`, 'msgLoginFailed');
-		if (user.isLocked) return handleFail(ctx, `[login] [locked] [name:${name}]`, 'msgUserLocked');
+		if (!user) return handleFail(ctx, `[login] [no found] [name:${un}]`, 'msgLoginFailed');
+		if (user.isLocked) return handleFail(ctx, `[login] [locked] [name:${user.name}]`, 'msgUserLocked');
 		ctx.cookies.set('uid', user._id);
 		ctx.cookies.set('token', token);
 		handleSuccess(ctx, `[login] [id:${user._id}] [name:${user.name}]`);
