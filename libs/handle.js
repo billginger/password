@@ -1,17 +1,19 @@
 const { log } = require('./log.js');
 
-const handleWarn = (ctx, msg, warn) => {
+const handleSuccess = (ctx, info) => {
+	ctx.status = 200;
+	log.info(`[success]`, info, `[${ctx.request.ip}]`);
+};
+
+const handleFail = (ctx, warn, msg) => {
 	ctx.status = 400;
 	ctx.message = msg;
-	ctx.body = warn;
-	log.warn(warn);
+	log.warn(`[fail]`, warn, `[${ctx.request.ip}]`);
 };
 
 const handleError = (ctx, err) => {
 	ctx.status = 500;
-	ctx.message = 'msgError';
-	ctx.body = err;
 	log.error(err);
 };
 
-module.exports = { handleWarn, handleError };
+module.exports = { handleSuccess, handleFail, handleError };
