@@ -29,7 +29,18 @@ exports.userLogin = async (ctx) => {
 	}
 };
 
-exports.userLogout = ctx => {
+exports.userLogout = async (ctx) => {
+	const _id = ctx.cookies.get('uid');
+	const token = ctx.cookies.get('token');
+	const conditions = { _id, token, isDel: false };
+	try {
+		const user = await User.findOne(conditions);
+		if (user.name) {
+			log.info(`User logout succeeded. User id: ${_id}, name: ${user.name}`);
+		}
+	} catch (err) {
+		log.error(err);
+	}
 	ctx.cookies.set('uid', '', { maxAge: 0 });
 	ctx.cookies.set('token', '', { maxAge: 0 });
 	ctx.redirect('/login');
