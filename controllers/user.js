@@ -23,7 +23,7 @@ exports.userLogin = async (ctx) => {
 		ctx.status = 200;
 		ctx.cookies.set('uid', user._id);
 		ctx.cookies.set('token', token);
-		log.info(`User login succeeded. User id: ${user._id}, name: ${name}`);
+		log.info(`User login succeeded. User ID: ${user._id}, name: ${name}, IP: ${ctx.request.ip}`);
 	} catch (err) {
 		handleError(ctx, err);
 	}
@@ -35,8 +35,8 @@ exports.userLogout = async (ctx) => {
 	const conditions = { _id, token, isDel: false };
 	try {
 		const user = await User.findOne(conditions);
-		if (user.name) {
-			log.info(`User logout succeeded. User id: ${_id}, name: ${user.name}`);
+		if (user && user.name) {
+			log.info(`User logout succeeded. User ID: ${_id}, name: ${user.name}, IP: ${ctx.request.ip}`);
 		}
 	} catch (err) {
 		log.error(err);
