@@ -3,22 +3,21 @@
 	overflow: hidden;
 }
 #tc-login-language {
-	position: absolute;
-	top: 10px;
-	right: 15px;
-	font-size: 17px;
-	color: #999;
-	transition: all 0.3s;
-}
-#tc-login-language:hover {
-	color: #666;
+	float: right;
+	border: 0;
+	.ant-menu-submenu-selected {
+		border: 0;
+	}
+	.anticon {
+		font-size: 16px;
+	}
 }
 #tc-login-card {
 	margin: 80px auto;
 	max-width: 300px;
 }
 .tc-login-icon {
-	color: rgba(0,0,0,0.25);
+	color: rgba(0, 0, 0, 0.25);
 }
 .tc-login-alert {
 	margin: 0 0 10px;
@@ -37,23 +36,16 @@
 #tc-portal-title>b {
 	font-weight: 500;
 }
+#tc-portal-language,
 #tc-portal-menu {
 	float: right;
 	line-height: 64px;
+	.anticon {
+		font-size: 16px;
+	}
 }
-#tc-portal-user {
-	font-size: 16px;
-}
-#tc-portal-language {
-	float: right;
-	padding: 0 20px;
-	font-size: 19px;
-	line-height: 64px;
-	color: #ccc;
-	transition: all 0.3s;
-}
-#tc-portal-language:hover {
-	color: #fff;
+#tc-portal-language .ant-menu-submenu-selected {
+	color: rgba(255, 255, 255, 0.65);
 }
 #tc-portal-content {
 	padding: 0 50px;

@@ -33,7 +33,7 @@ const PortalMenu = ({ intl, location }) => {
 					<Link to="/system/setting">{i18n.systemSetting}</Link>
 				</Menu.Item>
 			</Menu.SubMenu>
-			<Menu.SubMenu title={<Icon id="tc-portal-user" type="user" />}>
+			<Menu.SubMenu title={<Icon type="user" />}>
 				<Menu.Item onClick={confirmLogout}>
 					{i18n.userLogout}
 				</Menu.Item>

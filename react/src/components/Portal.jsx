@@ -11,7 +11,7 @@ const Portal = ({ intl, location }) => {
 		<Layout>
 			<Header>
 				<h1 id="tc-portal-title">Lazy<b>Pass</b></h1>
-				<MenuLanguage id="tc-portal-language" />
+				<MenuLanguage id="tc-portal-language" theme="dark" />
 				<PortalMenu location={location} />
 			</Header>
 			<Content id="tc-portal-content">
