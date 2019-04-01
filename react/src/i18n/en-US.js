@@ -14,6 +14,8 @@ const en_US = {
 	dashboard: 'Dashboard',
 	passwordManagement: 'Password',
 	systemManagement: 'System',
+	systemUser: 'Users',
+	systemSetting: 'Setting',
 	userLogout: 'Logout'
 };
 

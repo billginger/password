@@ -14,6 +14,8 @@ const zh_CN = {
 	dashboard: '概览',
 	passwordManagement: '密码管理',
 	systemManagement: '系统管理',
+	systemUser: '用户',
+	systemSetting: '设置',
 	userLogout: '退出登录'
 };
 
