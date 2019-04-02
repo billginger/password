@@ -1,8 +1,12 @@
 import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 import { Layout } from 'antd';
 import LanguageMenu from '../common/LanguageMenu.jsx';
 import PortalMenu from './PortalMenu.jsx';
 import PortalBreadcrumb from './PortalBreadcrumb.jsx';
+import PortalDashboard from './PortalDashboard.jsx';
+import PortalPassword from './PortalPassword.jsx';
+import PortalBuilding from './PortalBuilding.jsx';
 const { Header, Content, Footer } = Layout;
 
 const Portal = () => (
@@ -14,7 +18,11 @@ const Portal = () => (
 		</Header>
 		<Content id="tc-portal-content">
 			<PortalBreadcrumb />
-			<div style={{ background: '#fff', padding: 24, minHeight: 280 }}>Content</div>
+			<Switch>
+				<Route exact path="/" component={PortalDashboard} />
+				<Route path="/password" component={PortalPassword} />
+				<Route component={PortalBuilding} />
+			</Switch>
 		</Content>
 		<Footer id="tc-portal-footer">
 			LazyPass © 2019 Created by Bill
