@@ -1,9 +1,10 @@
 const Router = require('koa-router');
-const renderPage = require('../controllers/render.js');
+const { portalRoutes } = require('../react/src/expose/routes.js');
+const portalPage = require('../controllers/portal.js');
 const { userLogin, userLogout } = require('../controllers/user.js');
 
 const router = new Router();
-router.get(['/', '/login', '/password'], renderPage);
+router.get(portalRoutes, portalPage);
 router.post('/login', userLogin);
 router.get('/logout', userLogout);
 

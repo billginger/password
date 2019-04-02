@@ -10,7 +10,7 @@ for (let key in i18n) {
 	menuItem.push(<Menu.Item key={key}>{i18n[key].name}</Menu.Item>);
 }
 
-const MenuLanguage = ({ id, theme, lang, setLang }) => {
+const LanguageMenu = ({ id, theme, lang, setLang }) => {
 	const changeLanguage = e => {
 		setStorage('userLanguage', e.key);
 		setLang(e.key);
@@ -32,4 +32,4 @@ const mapDispatchToProps = dispatch => ({
 	setLang: payload => dispatch(setLanguage(payload))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(MenuLanguage);
+export default connect(mapStateToProps, mapDispatchToProps)(LanguageMenu);

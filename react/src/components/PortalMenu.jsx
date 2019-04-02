@@ -1,6 +1,6 @@
 import React from 'react';
 import { injectIntl } from 'react-intl';
-import { Link } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import { Menu, Icon, Modal } from 'antd';
 
 const PortalMenu = ({ intl, location }) => {
@@ -42,4 +42,4 @@ const PortalMenu = ({ intl, location }) => {
 	);
 };
 
-export default injectIntl(PortalMenu);
+export default injectIntl(withRouter(PortalMenu));
