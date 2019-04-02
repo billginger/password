@@ -1,12 +1,12 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebPackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	entry: {
 		'js/bundle': './src/App.jsx'
 	},
 	output: {
-		filename: '[name].js',
+		filename: '[name].js?[contenthash]',
 		path: __dirname + '/../static',
 		publicPath: '/'
 	},
@@ -31,12 +31,11 @@ module.exports = {
 	},
 	plugins: [
 		new MiniCssExtractPlugin({
-			filename: 'css/style.css'
+			filename: 'css/style.css?[contenthash]'
 		}),
-		new HtmlWebPackPlugin({
+		new HtmlWebpackPlugin({
 			template: './src/index.html',
-			filename: '../views/index.html',
-			hash: true
+			filename: '../views/index.html'
 		})
 	]
 };
