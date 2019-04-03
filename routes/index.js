@@ -1,5 +1,5 @@
 const Router = require('koa-router');
-const { portalRoutes } = require('../react/src/expose/routes.js');
+const { portalRoutes } = require('../react/src/routes/index.js');
 const portalPage = require('../controllers/portal.js');
 const { userLogin, userLogout } = require('../controllers/user.js');
 
