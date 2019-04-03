@@ -1,4 +1,4 @@
-const map = {
+const routesMap = {
 	'/': 'dashboard',
 	'/login': '',
 	'/password': 'passwordManagement',
@@ -8,8 +8,8 @@ const map = {
 };
 
 let portalRoutes = [];
-for (let key in map) {
+for (let key in routesMap) {
 	portalRoutes.push(key);
 }
 
-module.exports = { map, portalRoutes };
+module.exports = { routesMap, portalRoutes };
