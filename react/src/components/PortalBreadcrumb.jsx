@@ -2,7 +2,7 @@ import React from 'react';
 import { injectIntl } from 'react-intl';
 import { withRouter, Link } from 'react-router-dom';
 import { Breadcrumb } from 'antd';
-import { routesMap } from '../expose/routes.js';
+import { routesMap } from '../routes/index.js';
 
 const PortalBreadcrumb = ({ intl, location }) => {
 	const i18n = intl.messages;
@@ -12,7 +12,7 @@ const PortalBreadcrumb = ({ intl, location }) => {
 		return (
 			<Breadcrumb.Item key={url}>
 				<Link to={url}>
-					{i18n[routesMap[url]]}
+					{i18n[routesMap[url].i18n]}
 				</Link>
 			</Breadcrumb.Item>
 		);

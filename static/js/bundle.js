@@ -5848,6 +5848,30 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var antd
 
 /***/ }),
 
+/***/ "./src/components/Building.jsx":
+/*!*************************************!*\
+  !*** ./src/components/Building.jsx ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nvar PortalBuilding = function PortalBuilding() {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      background: '#fff',\n      padding: 24,\n      minHeight: 280\n    }\n  }, \"Building...\");\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (PortalBuilding);\n\n//# sourceURL=webpack:///./src/components/Building.jsx?");
+
+/***/ }),
+
+/***/ "./src/components/Dashboard.jsx":
+/*!**************************************!*\
+  !*** ./src/components/Dashboard.jsx ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nvar PortalDashboard = function PortalDashboard() {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      background: '#fff',\n      padding: 24,\n      minHeight: 280\n    }\n  }, \"Dashboard Content\");\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (PortalDashboard);\n\n//# sourceURL=webpack:///./src/components/Dashboard.jsx?");
+
+/***/ }),
+
 /***/ "./src/components/Login.jsx":
 /*!**********************************!*\
   !*** ./src/components/Login.jsx ***!
@@ -5860,6 +5884,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var antd
 
 /***/ }),
 
+/***/ "./src/components/Password.jsx":
+/*!*************************************!*\
+  !*** ./src/components/Password.jsx ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nvar PortalPassword = function PortalPassword() {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      background: '#fff',\n      padding: 24,\n      minHeight: 280\n    }\n  }, \"Password Content\");\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (PortalPassword);\n\n//# sourceURL=webpack:///./src/components/Password.jsx?");
+
+/***/ }),
+
 /***/ "./src/components/Portal.jsx":
 /*!***********************************!*\
   !*** ./src/components/Portal.jsx ***!
@@ -5868,7 +5904,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var antd
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var antd_lib_layout_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! antd/lib/layout/style */ \"./node_modules/antd/lib/layout/style/index.js\");\n/* harmony import */ var antd_lib_layout_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(antd_lib_layout_style__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/layout */ \"./node_modules/antd/lib/layout/index.js\");\n/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_layout__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/esm/react-router-dom.js\");\n/* harmony import */ var _common_LanguageMenu_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../common/LanguageMenu.jsx */ \"./src/common/LanguageMenu.jsx\");\n/* harmony import */ var _PortalMenu_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./PortalMenu.jsx */ \"./src/components/PortalMenu.jsx\");\n/* harmony import */ var _PortalBreadcrumb_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./PortalBreadcrumb.jsx */ \"./src/components/PortalBreadcrumb.jsx\");\n/* harmony import */ var _PortalDashboard_jsx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./PortalDashboard.jsx */ \"./src/components/PortalDashboard.jsx\");\n/* harmony import */ var _PortalPassword_jsx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./PortalPassword.jsx */ \"./src/components/PortalPassword.jsx\");\n/* harmony import */ var _PortalBuilding_jsx__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./PortalBuilding.jsx */ \"./src/components/PortalBuilding.jsx\");\n\n\n\n\n\n\n\n\n\n\nvar Header = antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default.a.Header,\n    Content = antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default.a.Content,\n    Footer = antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default.a.Footer;\nvar portalSubpages = {\n  '/': _PortalDashboard_jsx__WEBPACK_IMPORTED_MODULE_7__[\"default\"],\n  '/password': _PortalPassword_jsx__WEBPACK_IMPORTED_MODULE_8__[\"default\"],\n  '/system': '/system/user',\n  '/system/user': _PortalBuilding_jsx__WEBPACK_IMPORTED_MODULE_9__[\"default\"],\n  '/system/setting': _PortalBuilding_jsx__WEBPACK_IMPORTED_MODULE_9__[\"default\"]\n};\nvar portalRoutes = [];\n\nfor (var key in portalSubpages) {\n  if (typeof portalSubpages[key] == 'string') {\n    portalRoutes.push(react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__[\"Redirect\"], {\n      exact: true,\n      key: key,\n      from: key,\n      to: portalSubpages[key]\n    }));\n  } else {\n    portalRoutes.push(react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__[\"Route\"], {\n      exact: true,\n      key: key,\n      path: key,\n      component: portalSubpages[key]\n    }));\n  }\n}\n\nvar Portal = function Portal() {\n  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default.a, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Header, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(\"h1\", {\n    id: \"tc-portal-title\"\n  }, \"Lazy\", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(\"b\", null, \"Pass\")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_common_LanguageMenu_jsx__WEBPACK_IMPORTED_MODULE_4__[\"default\"], {\n    id: \"tc-portal-language\",\n    theme: \"dark\"\n  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_PortalMenu_jsx__WEBPACK_IMPORTED_MODULE_5__[\"default\"], null)), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Content, {\n    id: \"tc-portal-content\"\n  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_PortalBreadcrumb_jsx__WEBPACK_IMPORTED_MODULE_6__[\"default\"], null), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__[\"Switch\"], null, portalRoutes)), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Footer, {\n    id: \"tc-portal-footer\"\n  }, \"LazyPass \\xA9 2019 Created by Bill\"));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Portal);\n\n//# sourceURL=webpack:///./src/components/Portal.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var antd_lib_layout_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! antd/lib/layout/style */ \"./node_modules/antd/lib/layout/style/index.js\");\n/* harmony import */ var antd_lib_layout_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(antd_lib_layout_style__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/layout */ \"./node_modules/antd/lib/layout/index.js\");\n/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_layout__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _common_LanguageMenu_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../common/LanguageMenu.jsx */ \"./src/common/LanguageMenu.jsx\");\n/* harmony import */ var _PortalMenu_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./PortalMenu.jsx */ \"./src/components/PortalMenu.jsx\");\n/* harmony import */ var _PortalBreadcrumb_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./PortalBreadcrumb.jsx */ \"./src/components/PortalBreadcrumb.jsx\");\n/* harmony import */ var _PortalRoutes_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./PortalRoutes.jsx */ \"./src/components/PortalRoutes.jsx\");\n\n\n\n\n\n\n\nvar Header = antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default.a.Header,\n    Content = antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default.a.Content,\n    Footer = antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default.a.Footer;\n\nvar Portal = function Portal() {\n  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default.a, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Header, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(\"h1\", {\n    id: \"tc-portal-title\"\n  }, \"Lazy\", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(\"b\", null, \"Pass\")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_common_LanguageMenu_jsx__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n    id: \"tc-portal-language\",\n    theme: \"dark\"\n  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_PortalMenu_jsx__WEBPACK_IMPORTED_MODULE_4__[\"default\"], null)), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Content, {\n    id: \"tc-portal-content\"\n  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_PortalBreadcrumb_jsx__WEBPACK_IMPORTED_MODULE_5__[\"default\"], null), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_PortalRoutes_jsx__WEBPACK_IMPORTED_MODULE_6__[\"default\"], null)), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Footer, {\n    id: \"tc-portal-footer\"\n  }, \"LazyPass \\xA9 2019 Created by Bill\"));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Portal);\n\n//# sourceURL=webpack:///./src/components/Portal.jsx?");
 
 /***/ }),
 
@@ -5880,31 +5916,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var antd
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var antd_lib_breadcrumb_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! antd/lib/breadcrumb/style */ \"./node_modules/antd/lib/breadcrumb/style/index.js\");\n/* harmony import */ var antd_lib_breadcrumb_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(antd_lib_breadcrumb_style__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var antd_lib_breadcrumb__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/breadcrumb */ \"./node_modules/antd/lib/breadcrumb/index.js\");\n/* harmony import */ var antd_lib_breadcrumb__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_breadcrumb__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-intl */ \"./node_modules/react-intl/lib/index.es.js\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/esm/react-router-dom.js\");\n/* harmony import */ var _expose_routes_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../expose/routes.js */ \"./src/expose/routes.js\");\n/* harmony import */ var _expose_routes_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_expose_routes_js__WEBPACK_IMPORTED_MODULE_5__);\n\n\n\n\n\n\n\nvar PortalBreadcrumb = function PortalBreadcrumb(_ref) {\n  var intl = _ref.intl,\n      location = _ref.location;\n  var i18n = intl.messages;\n  var pathSnippets = location.pathname.split('/').slice(1);\n  var breadcrumbItems = pathSnippets.map(function (_, index) {\n    var url = \"/\".concat(pathSnippets.slice(0, index + 1).join('/'));\n    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(antd_lib_breadcrumb__WEBPACK_IMPORTED_MODULE_1___default.a.Item, {\n      key: url\n    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__[\"Link\"], {\n      to: url\n    }, i18n[_expose_routes_js__WEBPACK_IMPORTED_MODULE_5__[\"routesMap\"][url]]));\n  });\n  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(antd_lib_breadcrumb__WEBPACK_IMPORTED_MODULE_1___default.a, {\n    className: \"tc-portal-breadcrumb\"\n  }, breadcrumbItems);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Object(react_intl__WEBPACK_IMPORTED_MODULE_3__[\"injectIntl\"])(Object(react_router_dom__WEBPACK_IMPORTED_MODULE_4__[\"withRouter\"])(PortalBreadcrumb)));\n\n//# sourceURL=webpack:///./src/components/PortalBreadcrumb.jsx?");
-
-/***/ }),
-
-/***/ "./src/components/PortalBuilding.jsx":
-/*!*******************************************!*\
-  !*** ./src/components/PortalBuilding.jsx ***!
-  \*******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nvar PortalBuilding = function PortalBuilding() {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      background: '#fff',\n      padding: 24,\n      minHeight: 280\n    }\n  }, \"Building...\");\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (PortalBuilding);\n\n//# sourceURL=webpack:///./src/components/PortalBuilding.jsx?");
-
-/***/ }),
-
-/***/ "./src/components/PortalDashboard.jsx":
-/*!********************************************!*\
-  !*** ./src/components/PortalDashboard.jsx ***!
-  \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nvar PortalDashboard = function PortalDashboard() {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      background: '#fff',\n      padding: 24,\n      minHeight: 280\n    }\n  }, \"Dashboard Content\");\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (PortalDashboard);\n\n//# sourceURL=webpack:///./src/components/PortalDashboard.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var antd_lib_breadcrumb_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! antd/lib/breadcrumb/style */ \"./node_modules/antd/lib/breadcrumb/style/index.js\");\n/* harmony import */ var antd_lib_breadcrumb_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(antd_lib_breadcrumb_style__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var antd_lib_breadcrumb__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/breadcrumb */ \"./node_modules/antd/lib/breadcrumb/index.js\");\n/* harmony import */ var antd_lib_breadcrumb__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_breadcrumb__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-intl */ \"./node_modules/react-intl/lib/index.es.js\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/esm/react-router-dom.js\");\n/* harmony import */ var _routes_index_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../routes/index.js */ \"./src/routes/index.js\");\n/* harmony import */ var _routes_index_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_routes_index_js__WEBPACK_IMPORTED_MODULE_5__);\n\n\n\n\n\n\n\nvar PortalBreadcrumb = function PortalBreadcrumb(_ref) {\n  var intl = _ref.intl,\n      location = _ref.location;\n  var i18n = intl.messages;\n  var pathSnippets = location.pathname.split('/').slice(1);\n  var breadcrumbItems = pathSnippets.map(function (_, index) {\n    var url = \"/\".concat(pathSnippets.slice(0, index + 1).join('/'));\n    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(antd_lib_breadcrumb__WEBPACK_IMPORTED_MODULE_1___default.a.Item, {\n      key: url\n    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__[\"Link\"], {\n      to: url\n    }, i18n[_routes_index_js__WEBPACK_IMPORTED_MODULE_5__[\"routesMap\"][url].i18n]));\n  });\n  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(antd_lib_breadcrumb__WEBPACK_IMPORTED_MODULE_1___default.a, {\n    className: \"tc-portal-breadcrumb\"\n  }, breadcrumbItems);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Object(react_intl__WEBPACK_IMPORTED_MODULE_3__[\"injectIntl\"])(Object(react_router_dom__WEBPACK_IMPORTED_MODULE_4__[\"withRouter\"])(PortalBreadcrumb)));\n\n//# sourceURL=webpack:///./src/components/PortalBreadcrumb.jsx?");
 
 /***/ }),
 
@@ -5920,26 +5932,15 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var antd
 
 /***/ }),
 
-/***/ "./src/components/PortalPassword.jsx":
-/*!*******************************************!*\
-  !*** ./src/components/PortalPassword.jsx ***!
-  \*******************************************/
+/***/ "./src/components/PortalRoutes.jsx":
+/*!*****************************************!*\
+  !*** ./src/components/PortalRoutes.jsx ***!
+  \*****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nvar PortalPassword = function PortalPassword() {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      background: '#fff',\n      padding: 24,\n      minHeight: 280\n    }\n  }, \"Password Content\");\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (PortalPassword);\n\n//# sourceURL=webpack:///./src/components/PortalPassword.jsx?");
-
-/***/ }),
-
-/***/ "./src/expose/routes.js":
-/*!******************************!*\
-  !*** ./src/expose/routes.js ***!
-  \******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("var routesMap = {\n  '/': 'dashboard',\n  '/login': '',\n  '/password': 'passwordManagement',\n  '/system': 'systemManagement',\n  '/system/user': 'systemUser',\n  '/system/setting': 'systemSetting'\n};\nvar portalRoutes = [];\n\nfor (var key in routesMap) {\n  portalRoutes.push(key);\n}\n\nmodule.exports = {\n  routesMap: routesMap,\n  portalRoutes: portalRoutes\n};\n\n//# sourceURL=webpack:///./src/expose/routes.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/esm/react-router-dom.js\");\n/* harmony import */ var _Dashboard_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Dashboard.jsx */ \"./src/components/Dashboard.jsx\");\n/* harmony import */ var _Password_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Password.jsx */ \"./src/components/Password.jsx\");\n/* harmony import */ var _Building_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Building.jsx */ \"./src/components/Building.jsx\");\n/* harmony import */ var _routes_index_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../routes/index.js */ \"./src/routes/index.js\");\n/* harmony import */ var _routes_index_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_routes_index_js__WEBPACK_IMPORTED_MODULE_5__);\n\n\n\n\n\n\nvar subpages = {\n  Dashboard: _Dashboard_jsx__WEBPACK_IMPORTED_MODULE_2__[\"default\"],\n  Password: _Password_jsx__WEBPACK_IMPORTED_MODULE_3__[\"default\"],\n  Building: _Building_jsx__WEBPACK_IMPORTED_MODULE_4__[\"default\"]\n};\nvar routes = [];\n\nfor (var key in _routes_index_js__WEBPACK_IMPORTED_MODULE_5__[\"routesMap\"]) {\n  if (_routes_index_js__WEBPACK_IMPORTED_MODULE_5__[\"routesMap\"][key].component) {\n    routes.push(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[\"Route\"], {\n      exact: true,\n      key: key,\n      path: key,\n      component: subpages[_routes_index_js__WEBPACK_IMPORTED_MODULE_5__[\"routesMap\"][key].component]\n    }));\n  }\n\n  if (_routes_index_js__WEBPACK_IMPORTED_MODULE_5__[\"routesMap\"][key].to) {\n    routes.push(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[\"Redirect\"], {\n      exact: true,\n      key: key,\n      from: key,\n      to: _routes_index_js__WEBPACK_IMPORTED_MODULE_5__[\"routesMap\"][key].to\n    }));\n  }\n}\n\nvar PortalRoutes = function PortalRoutes() {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[\"Switch\"], null, routes);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (PortalRoutes);\n\n//# sourceURL=webpack:///./src/components/PortalRoutes.jsx?");
 
 /***/ }),
 
@@ -5987,6 +5988,17 @@ eval("__webpack_require__.r(__webpack_exports__);\nvar zh_CN = {\n  msgError: 'ç
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/less/style.less?");
+
+/***/ }),
+
+/***/ "./src/routes/index.js":
+/*!*****************************!*\
+  !*** ./src/routes/index.js ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("var routesMap = {\n  '/': {\n    i18n: 'dashboard',\n    component: 'Dashboard'\n  },\n  '/login': '',\n  '/password': {\n    i18n: 'passwordManagement',\n    component: 'Password'\n  },\n  '/system': {\n    i18n: 'systemManagement',\n    to: '/system/user'\n  },\n  '/system/user': {\n    i18n: 'systemUser',\n    component: 'Building'\n  },\n  '/system/setting': {\n    i18n: 'systemSetting',\n    component: 'Building'\n  }\n};\nvar portalRoutes = [];\n\nfor (var key in routesMap) {\n  portalRoutes.push(key);\n}\n\nmodule.exports = {\n  routesMap: routesMap,\n  portalRoutes: portalRoutes\n};\n\n//# sourceURL=webpack:///./src/routes/index.js?");
 
 /***/ }),
 
