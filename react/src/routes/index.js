@@ -3,7 +3,7 @@ const routesMap = {
 	'/login': '',
 	'/password': { i18n: 'passwordManagement', component: 'Password' },
 	'/system': { i18n: 'systemManagement', to: '/system/user' },
-	'/system/user': { i18n: 'systemUser', component: 'Building' },
+	'/system/user': { i18n: 'systemUser', component: 'User' },
 	'/system/setting': { i18n: 'systemSetting', component: 'Building' }
 };
 

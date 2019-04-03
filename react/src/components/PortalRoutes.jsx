@@ -2,12 +2,14 @@ import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Dashboard from './Dashboard.jsx';
 import Password from './Password.jsx';
+import User from './User.jsx';
 import Building from './Building.jsx';
 import { routesMap } from '../routes/index.js';
 
 const subpages = {
 	Dashboard,
 	Password,
+	User,
 	Building
 }
 
@@ -26,9 +28,11 @@ for (let key in routesMap) {
 }
 
 const PortalRoutes = () => (
-	<Switch>
-		{routes}
-	</Switch>
+	<div id="tc-portal-main">
+		<Switch>
+			{routes}
+		</Switch>
+	</div>
 );
 
 export default PortalRoutes;

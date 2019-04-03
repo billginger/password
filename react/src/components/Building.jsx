@@ -1,7 +1,7 @@
 import React from 'react';
 
-const PortalBuilding = () => (
-	<div style={{ background: '#fff', padding: 24, minHeight: 280 }}>Building...</div>
+const Building = () => (
+	<div>Building...</div>
 );
 
-export default PortalBuilding;
+export default Building;

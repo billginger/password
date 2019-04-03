@@ -1,7 +1,7 @@
 import React from 'react';
 
-const PortalPassword = () => (
-	<div style={{ background: '#fff', padding: 24, minHeight: 280 }}>Password Content</div>
+const Password = () => (
+	<div>Password Content</div>
 );
 
-export default PortalPassword;
+export default Password;
