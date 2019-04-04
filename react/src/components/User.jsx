@@ -16,13 +16,14 @@ class User extends React.Component {
 			credentials: 'same-origin'
 		}).then(res => (
 			res.ok ? res.json() : Promise.reject(res)
-		)).then(json => {
+		)).then(data => {
 			this.setState({
-				data: json
+				data
 			});
 		}).catch(err => {
+			const errMsg = err.statusText || err;
 			this.setState({
-				errMsg: err.statusText
+				errMsg
 			});
 		});
 	}
@@ -46,7 +47,7 @@ class User extends React.Component {
 		// Other
 		return (
 			<div>
-				{this.state.data}
+				{JSON.stringify(this.state.data)}
 			</div>
 		);
 	}

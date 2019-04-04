@@ -14,7 +14,7 @@ exports.userLogin = async (ctx) => {
 		if (user.isLocked) return handleFail(ctx, `[login] [locked] [name:${user.name}]`, 'msgUserLocked');
 		ctx.cookies.set('uid', user._id);
 		ctx.cookies.set('token', token);
-		handleSuccess(ctx, `[login] [id:${user._id}] [name:${user.name}]`);
+		handleSuccess(ctx, `[login] [id:${user._id}] [name:${user.name}]`, 'ok');
 	} catch (err) {
 		handleError(ctx, err);
 	}
@@ -26,7 +26,7 @@ exports.userLogout = async (ctx) => {
 	try {
 		const user = await User.findOne({ _id, token, isDel: false });
 		if (user) {
-			handleSuccess(ctx, `[logout] [id:${user._id}] [name:${user.name}]`);
+			handleSuccess(ctx, `[logout] [id:${user._id}] [name:${user.name}]`, 'ok');
 		}
 	} catch (err) {
 		handleError(ctx, err);
@@ -34,4 +34,8 @@ exports.userLogout = async (ctx) => {
 	ctx.cookies.set('uid', '', { maxAge: 0 });
 	ctx.cookies.set('token', '', { maxAge: 0 });
 	ctx.redirect('/login');
+};
+
+exports.userList = async (ctx) => {
+	handleSuccess(ctx, `[user] [list] [id:xxx] [name:xxx]`, ['test']);
 };
