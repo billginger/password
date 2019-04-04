@@ -23,17 +23,33 @@ exports.userLogin = async (ctx) => {
 exports.userLogout = async (ctx) => {
 	const _id = ctx.cookies.get('uid');
 	const token = ctx.cookies.get('token');
-	try {
-		const user = await User.findOne({ _id, token, isDel: false });
-		if (user) {
-			handleSuccess(ctx, `[logout] [id:${user._id}] [name:${user.name}]`, 'ok');
+	if (_id && token) {
+		try {
+			const user = await User.findOne({ _id, token, isDel: false });
+			if (user) {
+				handleSuccess(ctx, `[logout] [id:${user._id}] [name:${user.name}]`, 'ok');
+			}
+		} catch (err) {
+			handleError(ctx, err);
 		}
-	} catch (err) {
-		handleError(ctx, err);
 	}
 	ctx.cookies.set('uid', '', { maxAge: 0 });
 	ctx.cookies.set('token', '', { maxAge: 0 });
 	ctx.redirect('/login');
+};
+
+exports.checkSession = async (ctx, next) => {
+	const _id = ctx.cookies.get('uid');
+	const token = ctx.cookies.get('token');
+	if (!_id || !token) return handleFail(ctx, `[session] [no cookies]`, 'msgNeedLogin');
+	try {
+		const user = await User.findOne({ _id, token, isDel: false });
+		if (!user) return handleFail(ctx, `[session] [no found] [id:${_id}]`, 'msgLoginExpired');
+		if (user.isLocked) return handleFail(ctx, `[session] [locked] [name:${user.name}]`, 'msgUserLocked');
+		next();
+	} catch (err) {
+		handleError(ctx, err);
+	}
 };
 
 exports.userList = async (ctx) => {

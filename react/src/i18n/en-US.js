@@ -3,6 +3,8 @@ const en_US = {
 	msgNeedInput: 'Please input this field!',
 	msgLoginFailed: 'Login failed! Incorrect username or password!',
 	msgUserLocked: "Your account is locked! Please contact the administrator!",
+	msgNeedLogin: 'Please login first!',
+	msgLoginExpired: 'Your login information has expired! please login again!',
 	modalConfirmTitle: 'Please Check',
 	modalConfirmBody: 'To Confirm {action} {target}?',
 	loginTitle: 'Login to LazyPass',
