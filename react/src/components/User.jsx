@@ -1,6 +1,6 @@
 import React from 'react';
 import { injectIntl } from 'react-intl';
-import { Typography, Icon } from 'antd';
+import { Typography, Icon, Button, Table } from 'antd';
 const { Text } = Typography;
 
 class User extends React.Component {
@@ -44,10 +44,19 @@ class User extends React.Component {
 				<Icon type="loading" />
 			);
 		}
-		// Other
+		// Table Columns
+		const columns = [{
+			title: 'Name',
+			dataIndex: 'name'
+		}];
+		// Render Page
+		console.log(JSON.stringify(data));
 		return (
 			<div>
-				{JSON.stringify(this.state.data)}
+				<div>
+					<Button>{i18n.actionAdd}</Button>
+				</div>
+				<Table columns={columns} dataSource={data} />
 			</div>
 		);
 	}

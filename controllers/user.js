@@ -9,9 +9,9 @@ exports.userLogin = async (ctx) => {
 	const password = getPassword(pw);
 	const token = getToken();
 	try {
-		const user = await User.findOneAndUpdate({ name, password, isDel: false }, { token });
-		if (!user) return handleFail(ctx, `[login] [no found] [name:${un}]`, 'msgLoginFailed');
-		if (user.isLocked) return handleFail(ctx, `[login] [locked] [name:${user.name}]`, 'msgUserLocked');
+		const user = await User.findOneAndUpdate({ name, password, isDeleted: false }, { token });
+		if (!user) return handleFail(ctx, `[login] [name:${un}] [no found]`, 'msgLoginFailed');
+		if (user.isLocked) return handleFail(ctx, `[login] [name:${user.name}] [locked]`, 'msgUserLocked');
 		ctx.cookies.set('uid', user._id);
 		ctx.cookies.set('token', token);
 		handleSuccess(ctx, `[login] [id:${user._id}] [name:${user.name}]`, 'ok');
@@ -25,7 +25,7 @@ exports.userLogout = async (ctx) => {
 	const token = ctx.cookies.get('token');
 	if (_id && token) {
 		try {
-			const user = await User.findOne({ _id, token, isDel: false });
+			const user = await User.findOne({ _id, token, isDeleted: false });
 			if (user) {
 				handleSuccess(ctx, `[logout] [id:${user._id}] [name:${user.name}]`, 'ok');
 			}
@@ -43,15 +43,21 @@ exports.checkSession = async (ctx, next) => {
 	const token = ctx.cookies.get('token');
 	if (!_id || !token) return handleFail(ctx, `[session] [no cookies]`, 'msgNeedLogin');
 	try {
-		const user = await User.findOne({ _id, token, isDel: false });
-		if (!user) return handleFail(ctx, `[session] [no found] [id:${_id}]`, 'msgLoginExpired');
-		if (user.isLocked) return handleFail(ctx, `[session] [locked] [name:${user.name}]`, 'msgUserLocked');
-		next();
+		const user = await User.findOne({ _id, token, isDeleted: false });
+		if (!user) return handleFail(ctx, `[session] [id:${_id}] [no found]`, 'msgLoginExpired');
+		if (user.isLocked) return handleFail(ctx, `[session] [name:${user.name}] [locked]`, 'msgUserLocked');
 	} catch (err) {
-		handleError(ctx, err);
+		return handleError(ctx, err);
 	}
+	await next();
 };
 
 exports.userList = async (ctx) => {
-	handleSuccess(ctx, `[user] [list] [id:xxx] [name:xxx]`, ['test']);
+	try {
+		const users = await User.find({ isDeleted: false }, '-password -token -isDeleted').sort('-_id');
+		if (!users) return handleFail(ctx, `[user] [list] [no found]`, 'msgNotFound');
+		handleSuccess(ctx, `[user] [list]`, users);
+	} catch (err) {
+		handleError(ctx, err);
+	}
 };

@@ -7,9 +7,9 @@ const userSchema = new mongoose.Schema({
 	fullname: String,
 	email: String,
 	group: Array,
-	isSuper: { type: Boolean, default: false },
-	isLock: { type: Boolean, default: false },
-	isDel: { type: Boolean, default: false }
+	isRoot: { type: Boolean, default: false },
+	isLocked: { type: Boolean, default: false },
+	isDeleted: { type: Boolean, default: false }
 },
 {
 	timestamps: true
