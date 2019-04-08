@@ -8,7 +8,10 @@ const zh_CN = {
 	msgNotFound: '没有找到相关记录！',
 	modalConfirmTitle: '请确认',
 	modalConfirmBody: '确定要{action}{target}？',
-	actionAdd: '添加',
+	labelName: '名称',
+	labelCreatedAt: '创建日期',
+	labelUpdatedAt: '更新日期',
+	actionAdd: '新建',
 	loginTitle: '登录 LazyPass',
 	loginUsername: '用户名',
 	loginPassword: '密码',
@@ -19,6 +22,9 @@ const zh_CN = {
 	passwordManagement: '密码管理',
 	systemManagement: '系统管理',
 	systemUser: '用户',
+	systemUserFullName: '姓名',
+	systemUserEmail: '电子邮箱',
+	systemUserGroup: '用户组',
 	systemSetting: '设置',
 	userLogout: '退出登录'
 };

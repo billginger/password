@@ -8,6 +8,9 @@ const en_US = {
 	msgNotFound: 'Did not find the relevant records!',
 	modalConfirmTitle: 'Please Check',
 	modalConfirmBody: 'To Confirm {action} {target}?',
+	labelName: 'Name',
+	labelCreatedAt: 'Created Date',
+	labelUpdatedAt: 'Updated Date',
 	actionAdd: 'Add',
 	loginTitle: 'Login to LazyPass',
 	loginUsername: 'Username',
@@ -19,6 +22,9 @@ const en_US = {
 	passwordManagement: 'Password',
 	systemManagement: 'System',
 	systemUser: 'Users',
+	systemUserFullName: 'Full Name',
+	systemUserEmail: 'Email',
+	systemUserGroup: 'User Group',
 	systemSetting: 'Setting',
 	userLogout: 'Logout'
 };

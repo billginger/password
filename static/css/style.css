@@ -12002,6 +12002,9 @@ form .ant-input-group-wrapper {
   margin: 50px auto;
   font-size: 32px;
 }
+#tc-portal-list-table {
+  margin: 15px 0 0;
+}
 #tc-portal-footer {
   text-align: center;
 }

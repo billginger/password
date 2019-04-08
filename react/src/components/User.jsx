@@ -3,6 +3,10 @@ import { injectIntl } from 'react-intl';
 import { Typography, Icon, Button, Table } from 'antd';
 const { Text } = Typography;
 
+const withTimeZone = label => (
+	label + ' GMT+' + -(new Date().getTimezoneOffset() / 60)
+);
+
 class User extends React.Component {
 	constructor(props) {
 		super(props);
@@ -17,6 +21,11 @@ class User extends React.Component {
 		}).then(res => (
 			res.ok ? res.json() : Promise.reject(res)
 		)).then(data => {
+			for (let item of data) {
+				item.groupName = item.group.map(value => (
+					value
+				));
+			}
 			this.setState({
 				data
 			});
@@ -45,9 +54,38 @@ class User extends React.Component {
 			);
 		}
 		// Table Columns
+		const getLocalDate = date => {
+			date = new Date(date);
+			if (date == 'Invalid Date') {
+				return '-';
+			}
+			return new Date(date - date.getTimezoneOffset() * 60000).toJSON().slice(0, 19).replace('T', ' ');
+		};
 		const columns = [{
-			title: 'Name',
+			title: i18n.labelName,
 			dataIndex: 'name'
+		}, {
+			title: i18n.systemUserFullName,
+			dataIndex: 'fullname',
+			render: text => text || '-'
+		}, {
+			title: i18n.systemUserEmail,
+			dataIndex: 'email',
+			render: text => text || '-'
+		}, {
+			title: i18n.systemUserGroup,
+			dataIndex: 'groupName',
+			render: text => text.join(', ') || '-'
+		},  {
+			title: withTimeZone(i18n.labelCreatedAt),
+			dataIndex: 'createdAt',
+			sorter: (a, b) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime(),
+			render: text => getLocalDate(text)
+		}, {
+			title: withTimeZone(i18n.labelUpdatedAt),
+			dataIndex: 'updatedAt',
+			sorter: (a, b) => new Date(a.updatedAt).getTime() - new Date(b.updatedAt).getTime(),
+			render: text => getLocalDate(text)
 		}];
 		// Render Page
 		console.log(JSON.stringify(data));
@@ -56,7 +94,7 @@ class User extends React.Component {
 				<div>
 					<Button>{i18n.actionAdd}</Button>
 				</div>
-				<Table columns={columns} dataSource={data} />
+				<Table id="tc-portal-list-table" rowKey="_id" bordered={true} columns={columns} dataSource={data}/>
 			</div>
 		);
 	}
